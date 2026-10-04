@@ -2,6 +2,7 @@ src/Device.java
 src/DeviceState.java
 src/TvDevice.java
 src/RadioDevice.java
+src/ProjectorDevice.java
 src/Remote.java
 src/BasicRemote.java
 src/QuietRemote.java

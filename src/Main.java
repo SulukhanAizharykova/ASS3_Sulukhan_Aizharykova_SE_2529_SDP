@@ -51,6 +51,16 @@ public final class Main {
         passed += report("T5", "BasicRemote: TvDevice -> RadioDevice", t5Pass, actualT5, expectedT5);
         total++;
 
+        BasicRemote projectorBasic = new BasicRemote("B-03", new ProjectorDevice());
+        passed += check("T6", "BasicRemote + ProjectorDevice", projectorBasic.execute(),
+                "PROJECTOR power=ON volume=30");
+        total++;
+
+        QuietRemote projectorQuiet = new QuietRemote("Q-02", new ProjectorDevice());
+        passed += check("T7", "QuietRemote + ProjectorDevice", projectorQuiet.execute(),
+                "PROJECTOR power=ON volume=5");
+        total++;
+
         System.out.println("SUMMARY: " + passed + "/" + total + " PASS");
     }
 
